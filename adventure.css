@@ -1,0 +1,26 @@
+body{
+	background-image: url(img/startpagina.jpg);
+	background-size: cover;
+	margin: 0 auto;
+	width: 1200px;
+}
+#game-buttons{
+	margin: 20px 0;
+}
+button{
+	border: none;
+	padding: 15px 30px;
+}
+button:hover{
+	opacity: 75%;
+}
+#inventoryItem{
+	display: none;
+}
+#description{
+	font-size: 18px;
+	background-color: white;
+}
+#title{
+	background-color: white;
+}
