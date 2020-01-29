@@ -153,16 +153,48 @@ function l9k1(){
 	inventoryitem.style.display = 'none'
 	title.innerText = 'Level 9 De zee'
 	document.body.style.backgroundImage = "url('img/level9.jpg')";
-	description.innerText = ''
-	button1.innerText = ''
-	button2.innerText = ''
-	button1.onclick = l9k2;
-	button2.onclick = l9k1;
+	description.innerText = 'Je zwemt midden op zee zonder zwemvest wat doe je?'
+	button1.innerText = 'Ik ga op mijn rug drijven en wacht op hulp'
+	button2.innerText = 'Ik probeer naar land te zwemen'
+	button1.onclick = l10k1;
+	button2.onclick = l10k2;
 }
 function l9k2(){
 	title.innerText = 'Je hebt verloren'
 	document.body.style.backgroundImage = "url('img/game-over.png')";
 	description.innerText = 'Je hebt te weinig tijd het vliegtuig stort neer met jou er in! Refresh de pagina om opnieuw te starten'
+	button1.style.display = 'none'
+	button2.style.display = 'none'
+}
+function l10k1(){
+	inventoryitem.style.display = 'none'
+	title.innerText = 'Level 10 Boot'
+	document.body.style.backgroundImage = "url('img/level10.jpg')";
+	description.innerText = 'Je ziet een boot vaaren wat doe je?'
+	button1.innerText = 'Ik ga voor de boot zwemmen in de hoop dat hij mij ziet'
+	button2.innerText = 'ik blijf waar ik ben en roep om hulp'
+	button1.onclick = l11k2;
+	button2.onclick = l11k1;
+}
+function l10k2(){
+	title.innerText = 'Je hebt verloren'
+	document.body.style.backgroundImage = "url('img/game-over.png')";
+	description.innerText = 'Het is veel te ver zwemen je houd het niet vol! Refresh de pagina om opnieuw te starten'
+	button1.style.display = 'none'
+	button2.style.display = 'none'
+}
+function l11k1(){
+	inventoryitem.style.display = 'none'
+	title.innerText = 'Gewonnen'
+	document.body.style.backgroundImage = "url('img/level11.jpg')";
+	description.innerText = 'Je bent gezien door de boot en wordt veilig naar land gebracht!'
+	button1.style.display = 'none'
+	button2.style.display = 'none'
+}
+function l11k2(){
+	title.innerText = 'Je hebt verloren'
+	document.body.style.backgroundImage = "url('img/game-over.png')";
+	description.innerText = 'Je wordt aangevaren door de boot.. Refresh de pagina om opnieuw te starten'
 	button1.style.display = 'none'
 	button2.style.display = 'none'
 }
