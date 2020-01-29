@@ -13,6 +13,11 @@ button3.style.display = 'none'
 button1.innerText = 'Start'
 button1.onclick = l1;
 document.body.appendChild(button1);
+var restart = document.createElement('button');
+restart.innerHTML = 'Restart'
+document.body.appendChild(restart);
+restart.onclick = l1;
+restart.style.display = 'none'
 
 function l1(){
 	title.innerText = 'Level 1 De Douane:'
@@ -24,21 +29,44 @@ function l1(){
 	inventoryitem.style.display = 'block'
 	inventoryitem.style.position = 'absolute'
 	inventoryitem.style.top = '550px'
-	var kliko = document.createElement("img");
-	kliko.src = 'img/kliko.jpg'
 	button1.onclick = l2k1;
 	inventoryitem.onclick = l2k2;
 }
 function l2k1(){
-	title.innerText = 'Level 2'
-	document.body.style.backgroundImage = "url('img/level2.jpg')";
 	inventoryitem.style.display = 'none'
-}
-function l2k2(){
-	title.innerText = 'Level 2'
+	title.innerText = 'Level 2 Oortjes'
 	document.body.style.backgroundImage = "url('img/level2.jpg')";
-	description.innerText = 'je loopt naar je gate je vergeet je oortjes bij een restaurantje op het vliegveld maar je hebt haast om het vliegtuig te missen wat doe je?'
+	description.innerText = 'je loopt naar je gate je vergeet je oortjes bij een restaurantje op het vliegveld maar je hebt haast om je vlugt te halen wat doe je?'
 	button1.innerText = 'Ik ga terug'
 	button2.style.display = 'block'
-	button2.innerText = 'Ik ga zonder oortjes het vliegtuig'
+	button2.innerText = 'Ik ga zonder oortjes'
+	button1.onclick = l3k1;
+	button2.onclick = l3k2;
+}
+function l2k2(){
+	alert('Het mes is niet gevonden je hebt geluk gehad!')
+	inventoryitem.style.display = 'block'
+	title.innerText = 'Level 2 Oortjes'
+	document.body.style.backgroundImage = "url('img/level2.jpg')";
+	description.innerText = 'je loopt naar je gate je vergeet je oortjes bij een restaurantje op het vliegveld maar je hebt haast om je vlugt te halen wat doe je?'
+	button1.innerText = 'Ik ga terug'
+	button2.style.display = 'block'
+	button2.innerText = 'Ik ga zonder oortjes'
+	button1.onclick = gameover;
+	button2.onclick = l3k2;
+}
+function gameover(){
+	title.innerText = 'Je hebt verloren'
+	document.body.style.backgroundImage = "url('img/game-over.png')";
+	description.innerText = ''
+	restart.style.display = 'block'
+	button1.style.display = 'none'
+	button2.style.display = 'none'
+	button3.style.display = 'none'
+	inventoryItem.style.display = 'none'
+}
+function l3k2(){
+	title.innerText = 'Level 3 Opstijgen'
+	document.body.style.backgroundImage = "url('img/level3.jpg')";
+	description.innerText = 'description'
 }
